@@ -9,11 +9,7 @@ class UserController extends Controller
 {
     public function index(){
         $users = User::all();
-        /* $notes = Notes::all(); */
-        return view('user.index',[
-            'users' => $users,
-            /* 'notes' => $notes */
-        ]);
+        return view('user.index',compact('Users'));
     }
 
 }
