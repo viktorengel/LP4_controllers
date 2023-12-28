@@ -7,6 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello world</h1>
+    <h1>Listado de usuarios 1:</h1>
+    @if ($Users->isEmpty())
+        <p>El listado de usuarios esta vacia</p>    
+    @else
+        <ul>
+            @foreach ($Users as $User)
+            <li>{{ $user -> name }}</li>
+            @endforeach
+        </ul>
+    @endif
+
+    <h1>Listado de usuarios 2:</h1>
+    <ul>
+        @forelse ($Users as $user)
+            <li>{{ $user -> name }}</li>
+        @empty
+            <li>Lista vacia</li>
+        @endforelse
+    </ul>
 </body>
 </html>
