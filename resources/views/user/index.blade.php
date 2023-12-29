@@ -9,8 +9,8 @@
 <body>
     <h1>Listado de usuarios:</h1>
     <ul>
-        @forelse ($users as $User)
-            <li>{{ $User -> name }}</li>
+        @forelse ($users as $user)
+            <li>{{ $user -> name }} | {{ $user ->age}} years old</li>
         @empty
             <li>Lista vacia</li>
         @endforelse

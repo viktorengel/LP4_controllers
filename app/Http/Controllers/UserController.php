@@ -10,6 +10,13 @@ class UserController extends Controller
 {
     public function index(){
         $users = User::all();
+        /* $users = User::where('age','>=', 10)->orWhere('zip_code',246810)->get(); */
+        /* $users = User::where('age','>=', 1)->orderBy('age','asc')->get(); */
+        /* $users = User::where('age','>=', 1)->orderBy('age','desc')->limit(5, 10)->get(); */
+        /* $users = User::where('age','>=', 1)->first(); */
+        /* $users = User::find(1); */
+        /* $users = User::findOrFail(1); */
+
         return view('user.index',compact('users'));
     }
 
